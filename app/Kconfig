@@ -1,0 +1,7 @@
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+module = STRATEGY_GAME
+module-str = STRATEGY_GAME
+source "subsys/logging/Kconfig.template.log_config"

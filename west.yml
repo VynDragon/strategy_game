@@ -1,0 +1,23 @@
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: VynDragon
+      url-base: https://github.com/VynDragon
+
+  projects:
+    - name: zephyr_3d_game_template2
+      remote: VynDragon
+      revision: main
+      import: false
+    - name: zephyr
+      remote: VynDragon
+      revision: bflb_600m_oc
+      import:
+        name-allowlist:
+          - hal_bouffalolab
+          - lvgl
+          - cmsis
+          - hal_rpi_pico
+          - cmsis_6
+          - hal_espressif
