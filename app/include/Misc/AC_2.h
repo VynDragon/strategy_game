@@ -33,14 +33,8 @@ static const L3_Index Misc_AC_2_indexes[] = {
 11, 9, 8,
 9, 6, 5,
 };
-static const L3_COLORTYPE *Misc_AC_2_textures[] = {
-tex_AC,
-};
-static const L3_Unit Misc_AC_2_textures_width[] = {
-96,
-};
-static const L3_Unit Misc_AC_2_textures_height[] = {
-96,
+static const L3_Texture *Misc_AC_2_textures[] = {
+&tex_AC,
 };
 static const L3_Unit Misc_AC_2_UVs[] = {
 21, 74,
@@ -100,6 +94,26 @@ static const L3_Unit Misc_AC_2_UVs[] = {
 };
 static const L3_Index Misc_AC_2_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Misc_AC_2_Normals[] = {
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+};
 static const L3_Model3D Misc_AC_2 = {
 .vertices = Misc_AC_2_vertices,
 .triangleCount = 18,
@@ -108,8 +122,7 @@ static const L3_Model3D Misc_AC_2 = {
 .triangleTextures = Misc_AC_2_textures,
 .triangleUVs = Misc_AC_2_UVs,
 .triangleTextureIndex = Misc_AC_2_indexes_texture,
-.triangleTextureWidth = Misc_AC_2_textures_width,
-.triangleTextureHeight = Misc_AC_2_textures_height,
+.triangleNormals = Misc_AC_2_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -129,7 +142,7 @@ static const L3_Object Misc_AC_2_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Misc_AC_2,
 };

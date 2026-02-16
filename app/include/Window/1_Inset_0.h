@@ -37,14 +37,8 @@ static const L3_Index Window_1_Inset_0_indexes[] = {
 13, 9, 1,
 13, 12, 8,
 };
-static const L3_COLORTYPE *Window_1_Inset_0_textures[] = {
-tex_Window_1,
-};
-static const L3_Unit Window_1_Inset_0_textures_width[] = {
-64,
-};
-static const L3_Unit Window_1_Inset_0_textures_height[] = {
-64,
+static const L3_Texture *Window_1_Inset_0_textures[] = {
+&tex_Window_1,
 };
 static const L3_Unit Window_1_Inset_0_UVs[] = {
 35, 35,
@@ -110,6 +104,28 @@ static const L3_Unit Window_1_Inset_0_UVs[] = {
 };
 static const L3_Index Window_1_Inset_0_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Window_1_Inset_0_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Window_1_Inset_0 = {
 .vertices = Window_1_Inset_0_vertices,
 .triangleCount = 20,
@@ -118,8 +134,7 @@ static const L3_Model3D Window_1_Inset_0 = {
 .triangleTextures = Window_1_Inset_0_textures,
 .triangleUVs = Window_1_Inset_0_UVs,
 .triangleTextureIndex = Window_1_Inset_0_indexes_texture,
-.triangleTextureWidth = Window_1_Inset_0_textures_width,
-.triangleTextureHeight = Window_1_Inset_0_textures_height,
+.triangleNormals = Window_1_Inset_0_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -139,7 +154,7 @@ static const L3_Object Window_1_Inset_0_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Window_1_Inset_0,
 };

@@ -51,14 +51,8 @@ static const L3_Index Road_Connect_1_2_indexes[] = {
 10, 25, 7,
 9, 21, 20,
 };
-static const L3_COLORTYPE *Road_Connect_1_2_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_Connect_1_2_textures_width[] = {
-192,
-};
-static const L3_Unit Road_Connect_1_2_textures_height[] = {
-192,
+static const L3_Texture *Road_Connect_1_2_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_Connect_1_2_UVs[] = {
 7, 96,
@@ -130,6 +124,30 @@ static const L3_Unit Road_Connect_1_2_UVs[] = {
 };
 static const L3_Index Road_Connect_1_2_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Road_Connect_1_2_Normals[] = {
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+0.7055 * L3_F,-0.0 * L3_F,-0.7088 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.7071 * L3_F,-0.0 * L3_F,-0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+0.7055 * L3_F,-0.0 * L3_F,-0.7088 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.7071 * L3_F,-0.0 * L3_F,-0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+};
 static const L3_Model3D Road_Connect_1_2 = {
 .vertices = Road_Connect_1_2_vertices,
 .triangleCount = 22,
@@ -138,8 +156,7 @@ static const L3_Model3D Road_Connect_1_2 = {
 .triangleTextures = Road_Connect_1_2_textures,
 .triangleUVs = Road_Connect_1_2_UVs,
 .triangleTextureIndex = Road_Connect_1_2_indexes_texture,
-.triangleTextureWidth = Road_Connect_1_2_textures_width,
-.triangleTextureHeight = Road_Connect_1_2_textures_height,
+.triangleNormals = Road_Connect_1_2_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -159,7 +176,7 @@ static const L3_Object Road_Connect_1_2_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_Connect_1_2,
 };

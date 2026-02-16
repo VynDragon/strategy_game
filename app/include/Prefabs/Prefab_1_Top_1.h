@@ -1,13 +1,13 @@
 #pragma once
 static const L3_Unit Prefabs_Prefab_1_Top_1_vertices[] = {
-5069,10408,-5190,
-5069,2574,-5190,
-5069,10408,3047,
-5069,2574,3047,
--5069,10408,-5190,
--5069,2574,-5190,
--5069,10408,3047,
--5069,2574,3047,
+4970,10204,-5088,
+4970,2524,-5088,
+4970,10204,2988,
+4970,2524,2988,
+-4970,10204,-5088,
+-4970,2524,-5088,
+-4970,10204,2988,
+-4970,2524,2988,
 };
 static const L3_Index Prefabs_Prefab_1_Top_1_indexes[] = {
 2, 7, 3,
@@ -19,14 +19,8 @@ static const L3_Index Prefabs_Prefab_1_Top_1_indexes[] = {
 0, 2, 3,
 4, 0, 1,
 };
-static const L3_COLORTYPE *Prefabs_Prefab_1_Top_1_textures[] = {
-tex_facade_1,
-};
-static const L3_Unit Prefabs_Prefab_1_Top_1_textures_width[] = {
-256,
-};
-static const L3_Unit Prefabs_Prefab_1_Top_1_textures_height[] = {
-256,
+static const L3_Texture *Prefabs_Prefab_1_Top_1_textures[] = {
+&tex_facade_1,
 };
 static const L3_Unit Prefabs_Prefab_1_Top_1_UVs[] = {
 256, 0,
@@ -56,6 +50,16 @@ static const L3_Unit Prefabs_Prefab_1_Top_1_UVs[] = {
 };
 static const L3_Index Prefabs_Prefab_1_Top_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,};
+static const L3_Unit Prefabs_Prefab_1_Top_1_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+};
 static const L3_Model3D Prefabs_Prefab_1_Top_1 = {
 .vertices = Prefabs_Prefab_1_Top_1_vertices,
 .triangleCount = 8,
@@ -64,8 +68,7 @@ static const L3_Model3D Prefabs_Prefab_1_Top_1 = {
 .triangleTextures = Prefabs_Prefab_1_Top_1_textures,
 .triangleUVs = Prefabs_Prefab_1_Top_1_UVs,
 .triangleTextureIndex = Prefabs_Prefab_1_Top_1_indexes_texture,
-.triangleTextureWidth = Prefabs_Prefab_1_Top_1_textures_width,
-.triangleTextureHeight = Prefabs_Prefab_1_Top_1_textures_height,
+.triangleNormals = Prefabs_Prefab_1_Top_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -85,7 +88,7 @@ static const L3_Object Prefabs_Prefab_1_Top_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Prefabs_Prefab_1_Top_1,
 };

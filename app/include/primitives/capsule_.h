@@ -125,6 +125,8 @@ static const L3_Index primitives_capsule__indexes[] = {
 12, 13, 14,
 13, 1, 14,
 };
+static const L3_Unit primitives_capsule__Normals[] = {
+};
 static const L3_Model3D primitives_capsule_ = {
 .vertices = primitives_capsule__vertices,
 .triangleCount = 80,
@@ -133,8 +135,7 @@ static const L3_Model3D primitives_capsule_ = {
 .triangleTextures = NULL,
 .triangleUVs = NULL,
 .triangleTextureIndex = NULL,
-.triangleTextureWidth = NULL,
-.triangleTextureHeight = NULL,
+.triangleNormals = NULL,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -168,7 +169,7 @@ static const L3_Object primitives_capsule__object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 4,
+.config.visible = L3_VISIBLE_MODEL_SOLID,
 .solid_color = 0xFF,
 .model = &primitives_capsule_,
 };

@@ -13,14 +13,8 @@ static const L3_Index Road_1_Side_indexes[] = {
 3, 1, 0,
 4, 2, 1,
 };
-static const L3_COLORTYPE *Road_1_Side_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_1_Side_textures_width[] = {
-192,
-};
-static const L3_Unit Road_1_Side_textures_height[] = {
-192,
+static const L3_Texture *Road_1_Side_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_1_Side_UVs[] = {
 70, 12,
@@ -38,6 +32,12 @@ static const L3_Unit Road_1_Side_UVs[] = {
 };
 static const L3_Index Road_1_Side_indexes_texture[] = {
 0,0,0,0,};
+static const L3_Unit Road_1_Side_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Road_1_Side = {
 .vertices = Road_1_Side_vertices,
 .triangleCount = 4,
@@ -46,8 +46,7 @@ static const L3_Model3D Road_1_Side = {
 .triangleTextures = Road_1_Side_textures,
 .triangleUVs = Road_1_Side_UVs,
 .triangleTextureIndex = Road_1_Side_indexes_texture,
-.triangleTextureWidth = Road_1_Side_textures_width,
-.triangleTextureHeight = Road_1_Side_textures_height,
+.triangleNormals = Road_1_Side_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -67,7 +66,7 @@ static const L3_Object Road_1_Side_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_1_Side,
 };

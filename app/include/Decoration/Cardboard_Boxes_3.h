@@ -23,14 +23,8 @@ static const L3_Index Decoration_Cardboard_Boxes_3_indexes[] = {
 6, 4, 0,
 3, 1, 5,
 };
-static const L3_COLORTYPE *Decoration_Cardboard_Boxes_3_textures[] = {
-tex_Cardboard_Box,
-};
-static const L3_Unit Decoration_Cardboard_Boxes_3_textures_width[] = {
-64,
-};
-static const L3_Unit Decoration_Cardboard_Boxes_3_textures_height[] = {
-64,
+static const L3_Texture *Decoration_Cardboard_Boxes_3_textures[] = {
+&tex_Cardboard_Box,
 };
 static const L3_Unit Decoration_Cardboard_Boxes_3_UVs[] = {
 74, 26,
@@ -72,6 +66,20 @@ static const L3_Unit Decoration_Cardboard_Boxes_3_UVs[] = {
 };
 static const L3_Index Decoration_Cardboard_Boxes_3_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Decoration_Cardboard_Boxes_3_Normals[] = {
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Decoration_Cardboard_Boxes_3 = {
 .vertices = Decoration_Cardboard_Boxes_3_vertices,
 .triangleCount = 12,
@@ -80,8 +88,7 @@ static const L3_Model3D Decoration_Cardboard_Boxes_3 = {
 .triangleTextures = Decoration_Cardboard_Boxes_3_textures,
 .triangleUVs = Decoration_Cardboard_Boxes_3_UVs,
 .triangleTextureIndex = Decoration_Cardboard_Boxes_3_indexes_texture,
-.triangleTextureWidth = Decoration_Cardboard_Boxes_3_textures_width,
-.triangleTextureHeight = Decoration_Cardboard_Boxes_3_textures_height,
+.triangleNormals = Decoration_Cardboard_Boxes_3_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -101,7 +108,7 @@ static const L3_Object Decoration_Cardboard_Boxes_3_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Decoration_Cardboard_Boxes_3,
 };

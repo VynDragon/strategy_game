@@ -67,14 +67,8 @@ static const L3_Index Decoration_Pylon_indexes[] = {
 1, 19, 18,
 11, 23, 19,
 };
-static const L3_COLORTYPE *Decoration_Pylon_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Decoration_Pylon_textures_width[] = {
-192,
-};
-static const L3_Unit Decoration_Pylon_textures_height[] = {
-192,
+static const L3_Texture *Decoration_Pylon_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Decoration_Pylon_UVs[] = {
 105, 9,
@@ -200,6 +194,48 @@ static const L3_Unit Decoration_Pylon_UVs[] = {
 };
 static const L3_Index Decoration_Pylon_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Decoration_Pylon_Normals[] = {
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+};
 static const L3_Model3D Decoration_Pylon = {
 .vertices = Decoration_Pylon_vertices,
 .triangleCount = 40,
@@ -208,8 +244,7 @@ static const L3_Model3D Decoration_Pylon = {
 .triangleTextures = Decoration_Pylon_textures,
 .triangleUVs = Decoration_Pylon_UVs,
 .triangleTextureIndex = Decoration_Pylon_indexes_texture,
-.triangleTextureWidth = Decoration_Pylon_textures_width,
-.triangleTextureHeight = Decoration_Pylon_textures_height,
+.triangleNormals = Decoration_Pylon_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -229,7 +264,7 @@ static const L3_Object Decoration_Pylon_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Decoration_Pylon,
 };

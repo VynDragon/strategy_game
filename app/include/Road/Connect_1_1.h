@@ -43,14 +43,8 @@ static const L3_Index Road_Connect_1_1_indexes[] = {
 3, 16, 15,
 19, 21, 20,
 };
-static const L3_COLORTYPE *Road_Connect_1_1_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_Connect_1_1_textures_width[] = {
-192,
-};
-static const L3_Unit Road_Connect_1_1_textures_height[] = {
-192,
+static const L3_Texture *Road_Connect_1_1_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_Connect_1_1_UVs[] = {
 70, 6,
@@ -110,6 +104,26 @@ static const L3_Unit Road_Connect_1_1_UVs[] = {
 };
 static const L3_Index Road_Connect_1_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Road_Connect_1_1_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.7071 * L3_F,-0.0 * L3_F,0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.7071 * L3_F,-0.0 * L3_F,0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.7071 * L3_F,-0.0 * L3_F,0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.7071 * L3_F,-0.0 * L3_F,0.7071 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Road_Connect_1_1 = {
 .vertices = Road_Connect_1_1_vertices,
 .triangleCount = 18,
@@ -118,8 +132,7 @@ static const L3_Model3D Road_Connect_1_1 = {
 .triangleTextures = Road_Connect_1_1_textures,
 .triangleUVs = Road_Connect_1_1_UVs,
 .triangleTextureIndex = Road_Connect_1_1_indexes_texture,
-.triangleTextureWidth = Road_Connect_1_1_textures_width,
-.triangleTextureHeight = Road_Connect_1_1_textures_height,
+.triangleNormals = Road_Connect_1_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -139,7 +152,7 @@ static const L3_Object Road_Connect_1_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_Connect_1_1,
 };

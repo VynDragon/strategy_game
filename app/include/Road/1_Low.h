@@ -9,14 +9,8 @@ static const L3_Index Road_1_Low_indexes[] = {
 1, 3, 0,
 1, 2, 3,
 };
-static const L3_COLORTYPE *Road_1_Low_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_1_Low_textures_width[] = {
-192,
-};
-static const L3_Unit Road_1_Low_textures_height[] = {
-192,
+static const L3_Texture *Road_1_Low_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_1_Low_UVs[] = {
 0, 191,
@@ -28,6 +22,10 @@ static const L3_Unit Road_1_Low_UVs[] = {
 };
 static const L3_Index Road_1_Low_indexes_texture[] = {
 0,0,};
+static const L3_Unit Road_1_Low_Normals[] = {
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Road_1_Low = {
 .vertices = Road_1_Low_vertices,
 .triangleCount = 2,
@@ -36,8 +34,7 @@ static const L3_Model3D Road_1_Low = {
 .triangleTextures = Road_1_Low_textures,
 .triangleUVs = Road_1_Low_UVs,
 .triangleTextureIndex = Road_1_Low_indexes_texture,
-.triangleTextureWidth = Road_1_Low_textures_width,
-.triangleTextureHeight = Road_1_Low_textures_height,
+.triangleNormals = Road_1_Low_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -57,7 +54,7 @@ static const L3_Object Road_1_Low_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_1_Low,
 };

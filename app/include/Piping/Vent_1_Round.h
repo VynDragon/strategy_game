@@ -119,14 +119,8 @@ static const L3_Index Piping_Vent_1_Round_indexes[] = {
 39, 43, 41,
 36, 40, 42,
 };
-static const L3_COLORTYPE *Piping_Vent_1_Round_textures[] = {
-tex_Aluminium,
-};
-static const L3_Unit Piping_Vent_1_Round_textures_width[] = {
-64,
-};
-static const L3_Unit Piping_Vent_1_Round_textures_height[] = {
-64,
+static const L3_Texture *Piping_Vent_1_Round_textures[] = {
+&tex_Aluminium,
 };
 static const L3_Unit Piping_Vent_1_Round_UVs[] = {
 23, 50,
@@ -348,6 +342,80 @@ static const L3_Unit Piping_Vent_1_Round_UVs[] = {
 };
 static const L3_Index Piping_Vent_1_Round_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Piping_Vent_1_Round_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0883 * L3_F,-0.9961 * L3_F,-0.0 * L3_F,
+0.9856 * L3_F,-0.1688 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.2261 * L3_F,-0.9741 * L3_F,-0.0 * L3_F,
+-0.206 * L3_F,0.9785 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+0.8861 * L3_F,0.4635 * L3_F,-0.0 * L3_F,
+-0.9304 * L3_F,0.3664 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.9993 * L3_F,0.0189 * L3_F,-0.0313 * L3_F,
+0.9998 * L3_F,-0.0032 * L3_F,0.0198 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0045 * L3_F,-0.0045 * L3_F,
+0.9997 * L3_F,-0.0237 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.9993 * L3_F,0.0189 * L3_F,0.0313 * L3_F,
+-0.9985 * L3_F,0.054 * L3_F,-0.0 * L3_F,
+-0.2345 * L3_F,0.9721 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0493 * L3_F,0.9988 * L3_F,-0.0 * L3_F,
+-0.8911 * L3_F,-0.4538 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+0.4089 * L3_F,0.6689 * L3_F,0.6208 * L3_F,
+0.9661 * L3_F,0.258 * L3_F,-0.0 * L3_F,
+-0.2107 * L3_F,0.9775 * L3_F,-0.0 * L3_F,
+0.4089 * L3_F,0.6689 * L3_F,-0.6208 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0883 * L3_F,-0.9961 * L3_F,-0.0 * L3_F,
+0.9856 * L3_F,-0.1688 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.2261 * L3_F,-0.9741 * L3_F,-0.0 * L3_F,
+-0.206 * L3_F,0.9785 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+0.8861 * L3_F,0.4635 * L3_F,-0.0 * L3_F,
+-0.9304 * L3_F,0.3664 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.9996 * L3_F,0.02 * L3_F,-0.02 * L3_F,
+1.0 * L3_F,-0.0045 * L3_F,0.0045 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.9998 * L3_F,-0.0032 * L3_F,-0.0198 * L3_F,
+0.9997 * L3_F,-0.0237 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.9996 * L3_F,0.02 * L3_F,0.02 * L3_F,
+-0.9985 * L3_F,0.054 * L3_F,-0.0 * L3_F,
+-0.2345 * L3_F,0.9721 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0493 * L3_F,0.9988 * L3_F,-0.0 * L3_F,
+-0.8911 * L3_F,-0.4538 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+0.4089 * L3_F,0.6689 * L3_F,0.6208 * L3_F,
+0.9661 * L3_F,0.258 * L3_F,-0.0 * L3_F,
+-0.2107 * L3_F,0.9775 * L3_F,-0.0 * L3_F,
+0.4089 * L3_F,0.6689 * L3_F,-0.6208 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+0.5216 * L3_F,0.8532 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Piping_Vent_1_Round = {
 .vertices = Piping_Vent_1_Round_vertices,
 .triangleCount = 72,
@@ -356,8 +424,7 @@ static const L3_Model3D Piping_Vent_1_Round = {
 .triangleTextures = Piping_Vent_1_Round_textures,
 .triangleUVs = Piping_Vent_1_Round_UVs,
 .triangleTextureIndex = Piping_Vent_1_Round_indexes_texture,
-.triangleTextureWidth = Piping_Vent_1_Round_textures_width,
-.triangleTextureHeight = Piping_Vent_1_Round_textures_height,
+.triangleNormals = Piping_Vent_1_Round_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -377,7 +444,7 @@ static const L3_Object Piping_Vent_1_Round_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Piping_Vent_1_Round,
 };

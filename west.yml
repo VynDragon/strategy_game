@@ -11,8 +11,8 @@ manifest:
       revision: main
       import: false
     - name: zephyr
-      remote: VynDragon
-      revision: bflb_600m_oc
+      remote: zephyrproject-rtos
+      revision: main
       import:
         name-allowlist:
           - hal_bouffalolab
@@ -21,3 +21,5 @@ manifest:
           - hal_rpi_pico
           - cmsis_6
           - hal_espressif
+          - hal_st
+          - hal_stm32

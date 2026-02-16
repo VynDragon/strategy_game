@@ -21,14 +21,8 @@ static const L3_Index Wall_1_1_indexes[] = {
 6, 7, 1,
 9, 8, 0,
 };
-static const L3_COLORTYPE *Wall_1_1_textures[] = {
-tex_Brick_Wall_2,
-};
-static const L3_Unit Wall_1_1_textures_width[] = {
-96,
-};
-static const L3_Unit Wall_1_1_textures_height[] = {
-96,
+static const L3_Texture *Wall_1_1_textures[] = {
+&tex_Brick_Wall_2,
 };
 static const L3_Unit Wall_1_1_UVs[] = {
 72, 96,
@@ -58,6 +52,16 @@ static const L3_Unit Wall_1_1_UVs[] = {
 };
 static const L3_Index Wall_1_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,};
+static const L3_Unit Wall_1_1_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Wall_1_1 = {
 .vertices = Wall_1_1_vertices,
 .triangleCount = 8,
@@ -66,8 +70,7 @@ static const L3_Model3D Wall_1_1 = {
 .triangleTextures = Wall_1_1_textures,
 .triangleUVs = Wall_1_1_UVs,
 .triangleTextureIndex = Wall_1_1_indexes_texture,
-.triangleTextureWidth = Wall_1_1_textures_width,
-.triangleTextureHeight = Wall_1_1_textures_height,
+.triangleNormals = Wall_1_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -87,7 +90,7 @@ static const L3_Object Wall_1_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Wall_1_1,
 };

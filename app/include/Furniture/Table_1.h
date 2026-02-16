@@ -33,14 +33,8 @@ static const L3_Index Furniture_Table_1_indexes[] = {
 3, 9, 10,
 7, 10, 11,
 };
-static const L3_COLORTYPE *Furniture_Table_1_textures[] = {
-tex_Aluminium,
-};
-static const L3_Unit Furniture_Table_1_textures_width[] = {
-64,
-};
-static const L3_Unit Furniture_Table_1_textures_height[] = {
-64,
+static const L3_Texture *Furniture_Table_1_textures[] = {
+&tex_Aluminium,
 };
 static const L3_Unit Furniture_Table_1_UVs[] = {
 27, 42,
@@ -100,6 +94,26 @@ static const L3_Unit Furniture_Table_1_UVs[] = {
 };
 static const L3_Index Furniture_Table_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Furniture_Table_1_Normals[] = {
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.3116 * L3_F,-0.9502 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.9502 * L3_F,0.3116 * L3_F,
+-0.0 * L3_F,-0.9502 * L3_F,-0.3116 * L3_F,
+0.3116 * L3_F,-0.9502 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.3116 * L3_F,-0.9502 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.9502 * L3_F,0.3116 * L3_F,
+-0.0 * L3_F,-0.9502 * L3_F,-0.3116 * L3_F,
+0.3116 * L3_F,-0.9502 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Furniture_Table_1 = {
 .vertices = Furniture_Table_1_vertices,
 .triangleCount = 18,
@@ -108,8 +122,7 @@ static const L3_Model3D Furniture_Table_1 = {
 .triangleTextures = Furniture_Table_1_textures,
 .triangleUVs = Furniture_Table_1_UVs,
 .triangleTextureIndex = Furniture_Table_1_indexes_texture,
-.triangleTextureWidth = Furniture_Table_1_textures_width,
-.triangleTextureHeight = Furniture_Table_1_textures_height,
+.triangleNormals = Furniture_Table_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -129,7 +142,7 @@ static const L3_Object Furniture_Table_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Furniture_Table_1,
 };

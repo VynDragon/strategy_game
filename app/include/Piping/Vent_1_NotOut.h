@@ -19,14 +19,8 @@ static const L3_Index Piping_Vent_1_NotOut_indexes[] = {
 6, 4, 0,
 3, 1, 5,
 };
-static const L3_COLORTYPE *Piping_Vent_1_NotOut_textures[] = {
-tex_Aluminium,
-};
-static const L3_Unit Piping_Vent_1_NotOut_textures_width[] = {
-64,
-};
-static const L3_Unit Piping_Vent_1_NotOut_textures_height[] = {
-64,
+static const L3_Texture *Piping_Vent_1_NotOut_textures[] = {
+&tex_Aluminium,
 };
 static const L3_Unit Piping_Vent_1_NotOut_UVs[] = {
 3, 50,
@@ -56,6 +50,16 @@ static const L3_Unit Piping_Vent_1_NotOut_UVs[] = {
 };
 static const L3_Index Piping_Vent_1_NotOut_indexes_texture[] = {
 0,0,0,0,0,0,0,0,};
+static const L3_Unit Piping_Vent_1_NotOut_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Piping_Vent_1_NotOut = {
 .vertices = Piping_Vent_1_NotOut_vertices,
 .triangleCount = 8,
@@ -64,8 +68,7 @@ static const L3_Model3D Piping_Vent_1_NotOut = {
 .triangleTextures = Piping_Vent_1_NotOut_textures,
 .triangleUVs = Piping_Vent_1_NotOut_UVs,
 .triangleTextureIndex = Piping_Vent_1_NotOut_indexes_texture,
-.triangleTextureWidth = Piping_Vent_1_NotOut_textures_width,
-.triangleTextureHeight = Piping_Vent_1_NotOut_textures_height,
+.triangleNormals = Piping_Vent_1_NotOut_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -85,7 +88,7 @@ static const L3_Object Piping_Vent_1_NotOut_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Piping_Vent_1_NotOut,
 };

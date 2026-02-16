@@ -33,14 +33,8 @@ static const L3_Index Misc_Dumpster_indexes[] = {
 5, 11, 10,
 1, 8, 11,
 };
-static const L3_COLORTYPE *Misc_Dumpster_textures[] = {
-tex_Dumpster,
-};
-static const L3_Unit Misc_Dumpster_textures_width[] = {
-64,
-};
-static const L3_Unit Misc_Dumpster_textures_height[] = {
-64,
+static const L3_Texture *Misc_Dumpster_textures[] = {
+&tex_Dumpster,
 };
 static const L3_Unit Misc_Dumpster_UVs[] = {
 25, 18,
@@ -100,6 +94,26 @@ static const L3_Unit Misc_Dumpster_UVs[] = {
 };
 static const L3_Index Misc_Dumpster_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Misc_Dumpster_Normals[] = {
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,0.9811 * L3_F,0.1934 * L3_F,
+-0.593 * L3_F,0.79 * L3_F,0.1557 * L3_F,
+-0.0 * L3_F,0.4582 * L3_F,-0.8889 * L3_F,
+0.593 * L3_F,0.79 * L3_F,0.1557 * L3_F,
+-0.0 * L3_F,0.8334 * L3_F,0.5526 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,0.9811 * L3_F,0.1934 * L3_F,
+-0.593 * L3_F,0.79 * L3_F,0.1557 * L3_F,
+-0.0 * L3_F,0.4582 * L3_F,-0.8889 * L3_F,
+0.593 * L3_F,0.79 * L3_F,0.1557 * L3_F,
+-0.0 * L3_F,0.8334 * L3_F,0.5526 * L3_F,
+};
 static const L3_Model3D Misc_Dumpster = {
 .vertices = Misc_Dumpster_vertices,
 .triangleCount = 18,
@@ -108,8 +122,7 @@ static const L3_Model3D Misc_Dumpster = {
 .triangleTextures = Misc_Dumpster_textures,
 .triangleUVs = Misc_Dumpster_UVs,
 .triangleTextureIndex = Misc_Dumpster_indexes_texture,
-.triangleTextureWidth = Misc_Dumpster_textures_width,
-.triangleTextureHeight = Misc_Dumpster_textures_height,
+.triangleNormals = Misc_Dumpster_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -129,7 +142,7 @@ static const L3_Object Misc_Dumpster_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Misc_Dumpster,
 };

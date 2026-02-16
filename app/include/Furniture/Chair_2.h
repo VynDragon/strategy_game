@@ -111,14 +111,8 @@ static const L3_Index Furniture_Chair_2_indexes[] = {
 40, 44, 46,
 43, 47, 45,
 };
-static const L3_COLORTYPE *Furniture_Chair_2_textures[] = {
-tex_Aluminium,
-};
-static const L3_Unit Furniture_Chair_2_textures_width[] = {
-64,
-};
-static const L3_Unit Furniture_Chair_2_textures_height[] = {
-64,
+static const L3_Texture *Furniture_Chair_2_textures[] = {
+&tex_Aluminium,
 };
 static const L3_Unit Furniture_Chair_2_UVs[] = {
 6, 7,
@@ -304,6 +298,68 @@ static const L3_Unit Furniture_Chair_2_UVs[] = {
 };
 static const L3_Index Furniture_Chair_2_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Furniture_Chair_2_Normals[] = {
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.9781 * L3_F,-0.2082 * L3_F,
+0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.8604 * L3_F,0.5096 * L3_F,
+-0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0932 * L3_F,0.9956 * L3_F,
+-0.0 * L3_F,0.1657 * L3_F,-0.9862 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.9781 * L3_F,-0.2082 * L3_F,
+0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.8604 * L3_F,0.5096 * L3_F,
+-0.5997 * L3_F,-0.8002 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0932 * L3_F,0.9956 * L3_F,
+-0.0 * L3_F,0.1657 * L3_F,-0.9862 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Furniture_Chair_2 = {
 .vertices = Furniture_Chair_2_vertices,
 .triangleCount = 60,
@@ -312,8 +368,7 @@ static const L3_Model3D Furniture_Chair_2 = {
 .triangleTextures = Furniture_Chair_2_textures,
 .triangleUVs = Furniture_Chair_2_UVs,
 .triangleTextureIndex = Furniture_Chair_2_indexes_texture,
-.triangleTextureWidth = Furniture_Chair_2_textures_width,
-.triangleTextureHeight = Furniture_Chair_2_textures_height,
+.triangleNormals = Furniture_Chair_2_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -333,7 +388,7 @@ static const L3_Object Furniture_Chair_2_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Furniture_Chair_2,
 };

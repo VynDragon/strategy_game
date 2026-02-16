@@ -54,14 +54,8 @@ static const L3_Index Decoration_Greeble_9_1_indexes[] = {
 25, 24, 20,
 25, 18, 21,
 };
-static const L3_COLORTYPE *Decoration_Greeble_9_1_textures[] = {
-tex_Greeble_1,
-};
-static const L3_Unit Decoration_Greeble_9_1_textures_width[] = {
-96,
-};
-static const L3_Unit Decoration_Greeble_9_1_textures_height[] = {
-96,
+static const L3_Texture *Decoration_Greeble_9_1_textures[] = {
+&tex_Greeble_1,
 };
 static const L3_Unit Decoration_Greeble_9_1_UVs[] = {
 88, 15,
@@ -139,6 +133,32 @@ static const L3_Unit Decoration_Greeble_9_1_UVs[] = {
 };
 static const L3_Index Decoration_Greeble_9_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Decoration_Greeble_9_1_Normals[] = {
+-0.5206 * L3_F,0.6528 * L3_F,0.5504 * L3_F,
+-0.6054 * L3_F,-0.4494 * L3_F,0.6569 * L3_F,
+-0.5636 * L3_F,0.7068 * L3_F,0.4276 * L3_F,
+0.0202 * L3_F,0.7817 * L3_F,0.6233 * L3_F,
+0.0268 * L3_F,-0.5644 * L3_F,0.8251 * L3_F,
+-0.5565 * L3_F,-0.3806 * L3_F,0.7386 * L3_F,
+0.0326 * L3_F,0.7814 * L3_F,0.6231 * L3_F,
+0.0167 * L3_F,-0.5645 * L3_F,0.8252 * L3_F,
+-0.5206 * L3_F,0.6528 * L3_F,0.5503 * L3_F,
+-0.6054 * L3_F,-0.4494 * L3_F,0.6569 * L3_F,
+0.0202 * L3_F,0.7817 * L3_F,0.6233 * L3_F,
+0.0268 * L3_F,-0.5644 * L3_F,0.8251 * L3_F,
+-0.4972 * L3_F,0.6784 * L3_F,0.541 * L3_F,
+-0.6219 * L3_F,-0.4254 * L3_F,0.6575 * L3_F,
+-0.6415 * L3_F,0.5998 * L3_F,0.4783 * L3_F,
+0.0202 * L3_F,0.7817 * L3_F,0.6233 * L3_F,
+0.0268 * L3_F,-0.5644 * L3_F,0.8251 * L3_F,
+-0.5471 * L3_F,-0.4726 * L3_F,0.6909 * L3_F,
+0.0329 * L3_F,0.792 * L3_F,0.6096 * L3_F,
+0.0167 * L3_F,-0.5645 * L3_F,0.8252 * L3_F,
+-0.4972 * L3_F,0.6784 * L3_F,0.541 * L3_F,
+-0.6219 * L3_F,-0.4254 * L3_F,0.6575 * L3_F,
+0.0202 * L3_F,0.7817 * L3_F,0.6234 * L3_F,
+0.0268 * L3_F,-0.5644 * L3_F,0.8251 * L3_F,
+};
 static const L3_Model3D Decoration_Greeble_9_1 = {
 .vertices = Decoration_Greeble_9_1_vertices,
 .triangleCount = 24,
@@ -147,8 +167,7 @@ static const L3_Model3D Decoration_Greeble_9_1 = {
 .triangleTextures = Decoration_Greeble_9_1_textures,
 .triangleUVs = Decoration_Greeble_9_1_UVs,
 .triangleTextureIndex = Decoration_Greeble_9_1_indexes_texture,
-.triangleTextureWidth = Decoration_Greeble_9_1_textures_width,
-.triangleTextureHeight = Decoration_Greeble_9_1_textures_height,
+.triangleNormals = Decoration_Greeble_9_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -168,7 +187,7 @@ static const L3_Object Decoration_Greeble_9_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Decoration_Greeble_9_1,
 };

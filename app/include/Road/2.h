@@ -25,14 +25,8 @@ static const L3_Index Road_2_indexes[] = {
 6, 5, 1,
 9, 10, 5,
 };
-static const L3_COLORTYPE *Road_2_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_2_textures_width[] = {
-192,
-};
-static const L3_Unit Road_2_textures_height[] = {
-192,
+static const L3_Texture *Road_2_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_2_UVs[] = {
 46, 192,
@@ -68,6 +62,18 @@ static const L3_Unit Road_2_UVs[] = {
 };
 static const L3_Index Road_2_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Road_2_Normals[] = {
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Road_2 = {
 .vertices = Road_2_vertices,
 .triangleCount = 10,
@@ -76,8 +82,7 @@ static const L3_Model3D Road_2 = {
 .triangleTextures = Road_2_textures,
 .triangleUVs = Road_2_UVs,
 .triangleTextureIndex = Road_2_indexes_texture,
-.triangleTextureWidth = Road_2_textures_width,
-.triangleTextureHeight = Road_2_textures_height,
+.triangleNormals = Road_2_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -97,7 +102,7 @@ static const L3_Object Road_2_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_2,
 };

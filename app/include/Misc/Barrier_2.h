@@ -33,14 +33,8 @@ static const L3_Index Misc_Barrier_2_indexes[] = {
 3, 9, 10,
 7, 10, 11,
 };
-static const L3_COLORTYPE *Misc_Barrier_2_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Misc_Barrier_2_textures_width[] = {
-192,
-};
-static const L3_Unit Misc_Barrier_2_textures_height[] = {
-192,
+static const L3_Texture *Misc_Barrier_2_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Misc_Barrier_2_UVs[] = {
 156, 11,
@@ -100,6 +94,26 @@ static const L3_Unit Misc_Barrier_2_UVs[] = {
 };
 static const L3_Index Misc_Barrier_2_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Misc_Barrier_2_Normals[] = {
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.9756 * L3_F,0.2195 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.3909 * L3_F,0.9205 * L3_F,
+-0.0 * L3_F,0.3909 * L3_F,-0.9205 * L3_F,
+0.9756 * L3_F,0.2195 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.9756 * L3_F,0.2195 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.3909 * L3_F,0.9205 * L3_F,
+-0.0 * L3_F,0.3909 * L3_F,-0.9205 * L3_F,
+0.9756 * L3_F,0.2195 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Misc_Barrier_2 = {
 .vertices = Misc_Barrier_2_vertices,
 .triangleCount = 18,
@@ -108,8 +122,7 @@ static const L3_Model3D Misc_Barrier_2 = {
 .triangleTextures = Misc_Barrier_2_textures,
 .triangleUVs = Misc_Barrier_2_UVs,
 .triangleTextureIndex = Misc_Barrier_2_indexes_texture,
-.triangleTextureWidth = Misc_Barrier_2_textures_width,
-.triangleTextureHeight = Misc_Barrier_2_textures_height,
+.triangleNormals = Misc_Barrier_2_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -129,7 +142,7 @@ static const L3_Object Misc_Barrier_2_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Misc_Barrier_2,
 };

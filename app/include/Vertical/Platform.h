@@ -23,6 +23,20 @@ static const L3_Index Vertical_Platform_indexes[] = {
 2, 4, 7,
 1, 6, 5,
 };
+static const L3_Unit Vertical_Platform_Normals[] = {
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+};
 static const L3_Model3D Vertical_Platform = {
 .vertices = Vertical_Platform_vertices,
 .triangleCount = 12,
@@ -31,8 +45,7 @@ static const L3_Model3D Vertical_Platform = {
 .triangleTextures = NULL,
 .triangleUVs = NULL,
 .triangleTextureIndex = NULL,
-.triangleTextureWidth = NULL,
-.triangleTextureHeight = NULL,
+.triangleNormals = Vertical_Platform_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -52,7 +65,7 @@ static const L3_Object Vertical_Platform_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 4,
+.config.visible = L3_VISIBLE_MODEL_SOLID,
 .solid_color = 0xFF,
 .model = &Vertical_Platform,
 };

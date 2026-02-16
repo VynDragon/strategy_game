@@ -45,14 +45,8 @@ static const L3_Index Road_Crossing_indexes[] = {
 21, 23, 22,
 25, 27, 26,
 };
-static const L3_COLORTYPE *Road_Crossing_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_Crossing_textures_width[] = {
-192,
-};
-static const L3_Unit Road_Crossing_textures_height[] = {
-192,
+static const L3_Texture *Road_Crossing_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_Crossing_UVs[] = {
 17, 91,
@@ -100,6 +94,22 @@ static const L3_Unit Road_Crossing_UVs[] = {
 };
 static const L3_Index Road_Crossing_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Road_Crossing_Normals[] = {
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Road_Crossing = {
 .vertices = Road_Crossing_vertices,
 .triangleCount = 14,
@@ -108,8 +118,7 @@ static const L3_Model3D Road_Crossing = {
 .triangleTextures = Road_Crossing_textures,
 .triangleUVs = Road_Crossing_UVs,
 .triangleTextureIndex = Road_Crossing_indexes_texture,
-.triangleTextureWidth = Road_Crossing_textures_width,
-.triangleTextureHeight = Road_Crossing_textures_height,
+.triangleNormals = Road_Crossing_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -129,7 +138,7 @@ static const L3_Object Road_Crossing_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_Crossing,
 };

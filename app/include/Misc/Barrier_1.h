@@ -45,14 +45,8 @@ static const L3_Index Misc_Barrier_1_indexes[] = {
 10, 14, 13,
 11, 15, 14,
 };
-static const L3_COLORTYPE *Misc_Barrier_1_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Misc_Barrier_1_textures_width[] = {
-192,
-};
-static const L3_Unit Misc_Barrier_1_textures_height[] = {
-192,
+static const L3_Texture *Misc_Barrier_1_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Misc_Barrier_1_UVs[] = {
 167, 43,
@@ -136,6 +130,34 @@ static const L3_Unit Misc_Barrier_1_UVs[] = {
 };
 static const L3_Index Misc_Barrier_1_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Misc_Barrier_1_Normals[] = {
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.4062 * L3_F,0.9138 * L3_F,
+0.9581 * L3_F,0.2865 * L3_F,-0.0 * L3_F,
+-0.9581 * L3_F,0.2865 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.4062 * L3_F,-0.9138 * L3_F,
+-0.9891 * L3_F,0.1471 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.6748 * L3_F,-0.738 * L3_F,
+-0.0 * L3_F,0.6748 * L3_F,0.738 * L3_F,
+0.9891 * L3_F,0.1471 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.4062 * L3_F,0.9138 * L3_F,
+0.9581 * L3_F,0.2865 * L3_F,-0.0 * L3_F,
+-0.9581 * L3_F,0.2865 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.4062 * L3_F,-0.9138 * L3_F,
+-0.9891 * L3_F,0.1471 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.6748 * L3_F,-0.738 * L3_F,
+-0.0 * L3_F,0.6748 * L3_F,0.738 * L3_F,
+0.9891 * L3_F,0.1471 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Misc_Barrier_1 = {
 .vertices = Misc_Barrier_1_vertices,
 .triangleCount = 26,
@@ -144,8 +166,7 @@ static const L3_Model3D Misc_Barrier_1 = {
 .triangleTextures = Misc_Barrier_1_textures,
 .triangleUVs = Misc_Barrier_1_UVs,
 .triangleTextureIndex = Misc_Barrier_1_indexes_texture,
-.triangleTextureWidth = Misc_Barrier_1_textures_width,
-.triangleTextureHeight = Misc_Barrier_1_textures_height,
+.triangleNormals = Misc_Barrier_1_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -165,7 +186,7 @@ static const L3_Object Misc_Barrier_1_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Misc_Barrier_1,
 };

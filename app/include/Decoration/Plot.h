@@ -49,14 +49,8 @@ static const L3_Index Decoration_Plot_indexes[] = {
 5, 14, 15,
 1, 11, 17,
 };
-static const L3_COLORTYPE *Decoration_Plot_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Decoration_Plot_textures_width[] = {
-192,
-};
-static const L3_Unit Decoration_Plot_textures_height[] = {
-192,
+static const L3_Texture *Decoration_Plot_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Decoration_Plot_UVs[] = {
 107, 11,
@@ -146,6 +140,36 @@ static const L3_Unit Decoration_Plot_UVs[] = {
 };
 static const L3_Index Decoration_Plot_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Decoration_Plot_Normals[] = {
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.3591 * L3_F,0.6958 * L3_F,0.622 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.7183 * L3_F,0.6958 * L3_F,-0.0 * L3_F,
+-0.7183 * L3_F,0.6958 * L3_F,-0.0 * L3_F,
+0.3591 * L3_F,0.6958 * L3_F,-0.622 * L3_F,
+0.3591 * L3_F,0.6958 * L3_F,0.622 * L3_F,
+-0.3591 * L3_F,0.6958 * L3_F,-0.622 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,0.866 * L3_F,
+-0.3591 * L3_F,0.6958 * L3_F,0.622 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.5 * L3_F,-0.0 * L3_F,-0.866 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.7183 * L3_F,0.6958 * L3_F,-0.0 * L3_F,
+-0.7183 * L3_F,0.6958 * L3_F,-0.0 * L3_F,
+0.3591 * L3_F,0.6958 * L3_F,-0.622 * L3_F,
+0.3591 * L3_F,0.6958 * L3_F,0.622 * L3_F,
+-0.3591 * L3_F,0.6958 * L3_F,-0.622 * L3_F,
+};
 static const L3_Model3D Decoration_Plot = {
 .vertices = Decoration_Plot_vertices,
 .triangleCount = 28,
@@ -154,8 +178,7 @@ static const L3_Model3D Decoration_Plot = {
 .triangleTextures = Decoration_Plot_textures,
 .triangleUVs = Decoration_Plot_UVs,
 .triangleTextureIndex = Decoration_Plot_indexes_texture,
-.triangleTextureWidth = Decoration_Plot_textures_width,
-.triangleTextureHeight = Decoration_Plot_textures_height,
+.triangleNormals = Decoration_Plot_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -175,7 +198,7 @@ static const L3_Object Decoration_Plot_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Decoration_Plot,
 };

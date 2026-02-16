@@ -20,6 +20,13 @@ LOG_MODULE_REGISTER(main);
 
 #include "filters.h"
 
+#include "skybox/h2s_bk.h"
+#include "skybox/h2s_dn.h"
+#include "skybox/h2s_ft.h"
+#include "skybox/h2s_lf.h"
+#include "skybox/h2s_rt.h"
+#include "skybox/h2s_up.h"
+
 static const struct device *display_device = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 
 int blit_display_L8(L3_COLORTYPE *buffer, uint16_t x, uint16_t y, uint16_t size_x, uint16_t size_y)
@@ -157,6 +164,24 @@ int blit_display_MONO_dither(L3_COLORTYPE *buffer, uint16_t x, uint16_t y, uint1
 	return 0;
 }
 
+int blit_display_RGB565(L3_COLORTYPE *buffer, uint16_t x, uint16_t y, uint16_t size_x, uint16_t size_y)
+{
+	struct display_buffer_descriptor buf_desc;
+	uint16_t buf[160] = {0};
+	buf_desc.buf_size = size_x * 2;
+	buf_desc.width = size_x;
+	buf_desc.height = 1;
+	buf_desc.pitch = size_x;
+
+	for (int j = y; j < size_y; j+= 1) {
+		for (int i = 0; i < size_x; i++) {
+			buf[i] = (uint16_t)(buffer[i + j * size_x] & 0xF8);
+		}
+		display_write(display_device, x, j, &buf_desc, buf);
+	}
+	return 0;
+}
+
 int blit_display(L3_COLORTYPE *buffer, uint16_t x, uint16_t y, uint16_t size_x, uint16_t size_y)
 {
 	return blit_display_L8(buffer, x, y, size_x, size_y);
@@ -290,10 +315,14 @@ static Filter_f default_scene_filters[] = {
 	filter_fixgap,
 };
 
-L3_COLORTYPE sky_clearpix(L3_Unit x, L3_Unit y)
-{
-	return ((L3_RESOLUTION_Y - y) * 0x28) / L3_RESOLUTION_Y + (abs(L3_RESOLUTION_X / 2 - x) * 0x28) / (L3_RESOLUTION_X / 2);
-}
+L3_Skybox skybox = {
+	.faces.front = &h2s_ft,
+	.faces.back = &h2s_bk,
+	.faces.left = &h2s_lf,
+	.faces.right = &h2s_rt,
+	.faces.top = &h2s_up,
+	.faces.bottom = &h2s_dn,
+};
 
 int main()
 {
@@ -320,7 +349,7 @@ int main()
 	scene.statics_count = sizeof(map) / sizeof(*map);
 	scene.filters_count = 1,
 	scene.filters = default_scene_filters,
-	scene.clear_pix_func = sky_clearpix;
+	scene.skybox = &skybox;
 
 	engine_switchscene(&logo_scene);
 	k_msleep(2000);
@@ -329,8 +358,6 @@ int main()
 	engine_statics_enabled(true);
 
 	controls.speedmul = 1;
-
-	printf("obj cnt: %d\n", engine_object_getcnt() + engine_statics_getcnt());
 
 	return 0;
 }

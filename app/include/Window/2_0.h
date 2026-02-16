@@ -21,14 +21,8 @@ static const L3_Index Window_2_0_indexes[] = {
 2, 1, 5,
 0, 3, 7,
 };
-static const L3_COLORTYPE *Window_2_0_textures[] = {
-tex_Window_1,
-};
-static const L3_Unit Window_2_0_textures_width[] = {
-64,
-};
-static const L3_Unit Window_2_0_textures_height[] = {
-64,
+static const L3_Texture *Window_2_0_textures[] = {
+&tex_Window_1,
 };
 static const L3_Unit Window_2_0_UVs[] = {
 0, 15,
@@ -64,6 +58,18 @@ static const L3_Unit Window_2_0_UVs[] = {
 };
 static const L3_Index Window_2_0_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Window_2_0_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.7579 * L3_F,-0.0 * L3_F,0.6524 * L3_F,
+0.7579 * L3_F,-0.0 * L3_F,0.6524 * L3_F,
+-0.0 * L3_F,0.7579 * L3_F,0.6524 * L3_F,
+-0.0 * L3_F,-0.7579 * L3_F,0.6524 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.7579 * L3_F,-0.0 * L3_F,0.6524 * L3_F,
+0.7579 * L3_F,-0.0 * L3_F,0.6524 * L3_F,
+-0.0 * L3_F,0.7579 * L3_F,0.6524 * L3_F,
+-0.0 * L3_F,-0.7579 * L3_F,0.6524 * L3_F,
+};
 static const L3_Model3D Window_2_0 = {
 .vertices = Window_2_0_vertices,
 .triangleCount = 10,
@@ -72,8 +78,7 @@ static const L3_Model3D Window_2_0 = {
 .triangleTextures = Window_2_0_textures,
 .triangleUVs = Window_2_0_UVs,
 .triangleTextureIndex = Window_2_0_indexes_texture,
-.triangleTextureWidth = Window_2_0_textures_width,
-.triangleTextureHeight = Window_2_0_textures_height,
+.triangleNormals = Window_2_0_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -93,7 +98,7 @@ static const L3_Object Window_2_0_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Window_2_0,
 };

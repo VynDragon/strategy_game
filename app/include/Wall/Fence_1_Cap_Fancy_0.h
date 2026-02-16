@@ -1,21 +1,21 @@
 #pragma once
 static const L3_Unit Wall_Fence_1_Cap_Fancy_0_vertices[] = {
-522,1566,208,
-913,0,78,
-600,1410,78,
-522,1410,208,
-522,1566,-208,
-913,0,-78,
-600,1410,-78,
-522,1410,-208,
-600,1566,78,
-600,1566,-78,
-522,0,78,
-522,0,-78,
-522,1410,-78,
-522,1410,78,
-522,1566,-78,
-522,1566,78,
+512,1536,204,
+896,0,76,
+588,1382,76,
+512,1382,204,
+512,1536,-204,
+896,0,-76,
+588,1382,-76,
+512,1382,-204,
+588,1536,76,
+588,1536,-76,
+512,0,76,
+512,0,-76,
+512,1382,-76,
+512,1382,76,
+512,1536,-76,
+512,1536,76,
 };
 static const L3_Index Wall_Fence_1_Cap_Fancy_0_indexes[] = {
 5, 2, 1,
@@ -37,14 +37,8 @@ static const L3_Index Wall_Fence_1_Cap_Fancy_0_indexes[] = {
 10, 1, 2,
 8, 9, 14,
 };
-static const L3_COLORTYPE *Wall_Fence_1_Cap_Fancy_0_textures[] = {
-tex_Brick_Wall_1,
-};
-static const L3_Unit Wall_Fence_1_Cap_Fancy_0_textures_width[] = {
-96,
-};
-static const L3_Unit Wall_Fence_1_Cap_Fancy_0_textures_height[] = {
-96,
+static const L3_Texture *Wall_Fence_1_Cap_Fancy_0_textures[] = {
+&tex_Brick_Wall_1,
 };
 static const L3_Unit Wall_Fence_1_Cap_Fancy_0_UVs[] = {
 24, 96,
@@ -104,6 +98,26 @@ static const L3_Unit Wall_Fence_1_Cap_Fancy_0_UVs[] = {
 };
 static const L3_Index Wall_Fence_1_Cap_Fancy_0_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Wall_Fence_1_Cap_Fancy_0_Normals[] = {
+0.9762 * L3_F,0.2169 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.8575 * L3_F,-0.0 * L3_F,0.5145 * L3_F,
+0.8575 * L3_F,-0.0 * L3_F,-0.5145 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.9762 * L3_F,0.2169 * L3_F,-0.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+0.8575 * L3_F,-0.0 * L3_F,0.5145 * L3_F,
+0.8575 * L3_F,-0.0 * L3_F,-0.5145 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Wall_Fence_1_Cap_Fancy_0 = {
 .vertices = Wall_Fence_1_Cap_Fancy_0_vertices,
 .triangleCount = 18,
@@ -112,8 +126,7 @@ static const L3_Model3D Wall_Fence_1_Cap_Fancy_0 = {
 .triangleTextures = Wall_Fence_1_Cap_Fancy_0_textures,
 .triangleUVs = Wall_Fence_1_Cap_Fancy_0_UVs,
 .triangleTextureIndex = Wall_Fence_1_Cap_Fancy_0_indexes_texture,
-.triangleTextureWidth = Wall_Fence_1_Cap_Fancy_0_textures_width,
-.triangleTextureHeight = Wall_Fence_1_Cap_Fancy_0_textures_height,
+.triangleNormals = Wall_Fence_1_Cap_Fancy_0_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -133,7 +146,7 @@ static const L3_Object Wall_Fence_1_Cap_Fancy_0_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Wall_Fence_1_Cap_Fancy_0,
 };

@@ -39,14 +39,8 @@ static const L3_Index Wall_Door_1_0_indexes[] = {
 7, 6, 2,
 5, 7, 3,
 };
-static const L3_COLORTYPE *Wall_Door_1_0_textures[] = {
-tex_Door_0,
-};
-static const L3_Unit Wall_Door_1_0_textures_width[] = {
-64,
-};
-static const L3_Unit Wall_Door_1_0_textures_height[] = {
-64,
+static const L3_Texture *Wall_Door_1_0_textures[] = {
+&tex_Door_0,
 };
 static const L3_Unit Wall_Door_1_0_UVs[] = {
 59, 63,
@@ -112,6 +106,28 @@ static const L3_Unit Wall_Door_1_0_UVs[] = {
 };
 static const L3_Index Wall_Door_1_0_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Wall_Door_1_0_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.9999 * L3_F,0.0102 * L3_F,-0.0 * L3_F,
+-0.9999 * L3_F,0.0102 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+0.9999 * L3_F,0.0102 * L3_F,-0.0 * L3_F,
+-0.9999 * L3_F,0.0102 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,-1.0 * L3_F,-0.0 * L3_F,
+-1.0 * L3_F,-0.0 * L3_F,-0.0 * L3_F,
+};
 static const L3_Model3D Wall_Door_1_0 = {
 .vertices = Wall_Door_1_0_vertices,
 .triangleCount = 20,
@@ -120,8 +136,7 @@ static const L3_Model3D Wall_Door_1_0 = {
 .triangleTextures = Wall_Door_1_0_textures,
 .triangleUVs = Wall_Door_1_0_UVs,
 .triangleTextureIndex = Wall_Door_1_0_indexes_texture,
-.triangleTextureWidth = Wall_Door_1_0_textures_width,
-.triangleTextureHeight = Wall_Door_1_0_textures_height,
+.triangleNormals = Wall_Door_1_0_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -141,7 +156,7 @@ static const L3_Object Wall_Door_1_0_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Wall_Door_1_0,
 };

@@ -1,0 +1,6 @@
+board:
+  name: mini_stm32h723
+  full_name: MiniSTM32H723 Core Board
+  vendor: weact
+  socs:
+    - name: stm32h723xx

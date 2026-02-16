@@ -53,14 +53,8 @@ static const L3_Index Road_2_Support_indexes[] = {
 6, 24, 25,
 4, 25, 24,
 };
-static const L3_COLORTYPE *Road_2_Support_textures[] = {
-tex_Road_1,
-};
-static const L3_Unit Road_2_Support_textures_width[] = {
-192,
-};
-static const L3_Unit Road_2_Support_textures_height[] = {
-192,
+static const L3_Texture *Road_2_Support_textures[] = {
+&tex_Road_1,
 };
 static const L3_Unit Road_2_Support_UVs[] = {
 47, 0,
@@ -138,6 +132,32 @@ static const L3_Unit Road_2_Support_UVs[] = {
 };
 static const L3_Index Road_2_Support_indexes_texture[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+static const L3_Unit Road_2_Support_Normals[] = {
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,0.3948 * L3_F,0.9188 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.0777 * L3_F,-0.997 * L3_F,
+-0.0 * L3_F,0.3948 * L3_F,-0.9188 * L3_F,
+-0.0 * L3_F,0.0777 * L3_F,0.997 * L3_F,
+-0.0 * L3_F,-0.9923 * L3_F,-0.124 * L3_F,
+-0.0 * L3_F,-0.9923 * L3_F,0.124 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,0.3948 * L3_F,0.9188 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,-0.0 * L3_F,-1.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,1.0 * L3_F,-0.0 * L3_F,
+-0.0 * L3_F,0.0777 * L3_F,-0.997 * L3_F,
+-0.0 * L3_F,0.3948 * L3_F,-0.9188 * L3_F,
+-0.0 * L3_F,0.0777 * L3_F,0.997 * L3_F,
+-0.0 * L3_F,-0.9923 * L3_F,-0.124 * L3_F,
+-0.0 * L3_F,-0.9923 * L3_F,0.124 * L3_F,
+};
 static const L3_Model3D Road_2_Support = {
 .vertices = Road_2_Support_vertices,
 .triangleCount = 24,
@@ -146,8 +166,7 @@ static const L3_Model3D Road_2_Support = {
 .triangleTextures = Road_2_Support_textures,
 .triangleUVs = Road_2_Support_UVs,
 .triangleTextureIndex = Road_2_Support_indexes_texture,
-.triangleTextureWidth = Road_2_Support_textures_width,
-.triangleTextureHeight = Road_2_Support_textures_height,
+.triangleNormals = Road_2_Support_Normals,
 };
 #pragma once
 #ifndef ARRAY_SIZE
@@ -167,7 +186,7 @@ static const L3_Object Road_2_Support_object_object = {
 .transform.rotation.z = 0,
 .transform.rotation.w = L3_F,
 .config.backfaceCulling = 1,
-.config.visible = 1,
+.config.visible = L3_VISIBLE_MODEL_TEXTURED,
 .solid_color = 0xFF,
 .model = &Road_2_Support,
 };
