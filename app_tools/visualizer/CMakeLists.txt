@@ -1,14 +1,9 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(3d_game_template_demo)
 
-project(strategy_game)
-
-target_sources(app PRIVATE
-src/main.c
-src/engine.c
-src/context.c
-src/menu_scene.c)
+target_sources(app PRIVATE src/main.c src/editor_render.c src/editor_UI.c)
 
 zephyr_include_directories(include)
 

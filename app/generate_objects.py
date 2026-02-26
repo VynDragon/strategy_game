@@ -1,0 +1,1 @@
+../../zephyr_3d_game_template2/editor/generate_objects.py

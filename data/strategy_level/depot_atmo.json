@@ -1,0 +1,5 @@
+{
+"model_path":"strategy_level/depot_atmo.obj",
+"textures": ["textures/metal_roof.json", "textures/corrugated_wall.json", "textures/garage_door.json", "textures/concrete.json", ""],
+"model":"strategy_level/depot_atmo.json"
+}

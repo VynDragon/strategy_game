@@ -1,0 +1,5 @@
+{
+"model_path":"strategy_level/base_atmo.obj",
+"textures": ["textures/metal_roof.json", "textures/corrugated_wall.json", "textures/garage_door.json", "textures/concrete.json", "textures/facade_windows.json", "textures/asphalt.json", ""],
+"model":"strategy_level/base_atmo.json"
+}

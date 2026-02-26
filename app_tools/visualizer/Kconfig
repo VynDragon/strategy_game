@@ -1,0 +1,7 @@
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+module = VISUALIZER
+module-str = VISUALIZER
+source "subsys/logging/Kconfig.template.log_config"

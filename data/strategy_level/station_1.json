@@ -1,0 +1,5 @@
+{
+"model_path":"strategy_level/station_1.obj",
+"textures": ["textures/solar_panel.json", "textures/cable.json", "textures/metal_wear_light.json", ""],
+"model":"strategy_level/station_1.json"
+}

@@ -1,1 +1,3 @@
-# Nothing
+config DATA_PATH
+	string "Path to data folder"
+	default "data"

@@ -1,0 +1,5 @@
+- Super Duper Batch Exporter
+format: obj
+set location and rotation all at 0
+preset should have triangulate all
+preset may or may not have normals (preferred having)
