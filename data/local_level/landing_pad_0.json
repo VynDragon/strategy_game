@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/landing_pad_0.obj",
+"textures": ["textures/concrete.json", "textures/asphalt.json", "textures/antenna.json"],
+"model":"local_level/landing_pad_0.json"
+}

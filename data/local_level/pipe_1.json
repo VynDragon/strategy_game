@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/pipe_1.obj",
+"textures": ["textures/concrete_dark.json", "textures/metal_wear_mid.json"],
+"model":"local_level/pipe_1.json"
+}

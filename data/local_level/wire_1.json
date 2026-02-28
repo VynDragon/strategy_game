@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/wire_1.obj",
+"textures": ["textures/cable.json"],
+"model":"local_level/wire_1.json"
+}

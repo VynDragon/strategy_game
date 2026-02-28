@@ -1,0 +1,7 @@
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+module = EDITOR
+module-str = EDITOR
+source "subsys/logging/Kconfig.template.log_config"

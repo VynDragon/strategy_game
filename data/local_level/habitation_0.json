@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/habitation_0.obj",
+"textures": ["textures/concrete.json", "textures/garage_door.json", "textures/facade_windows.json", "textures/antenna.json"],
+"model":"local_level/habitation_0.json"
+}

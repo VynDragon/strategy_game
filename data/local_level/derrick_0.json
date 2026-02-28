@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/derrick_0.obj",
+"textures": ["textures/concrete.json", "textures/garage_door.json", "textures/metal_wear_mid.json", "textures/vents.json", "textures/facade_windows.json", "textures/antenna.json"],
+"model":"local_level/derrick_0.json"
+}

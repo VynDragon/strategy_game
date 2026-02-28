@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/tank_0.obj",
+"textures": ["textures/metal_wear_mid.json", ""],
+"model":"local_level/tank_0.json"
+}

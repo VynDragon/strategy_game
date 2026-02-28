@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/storage_0.obj",
+"textures": ["textures/concrete_light.json", "textures/garage_door.json"],
+"model":"local_level/storage_0.json"
+}

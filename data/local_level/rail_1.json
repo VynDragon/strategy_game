@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/rail_1.obj",
+"textures": ["textures/concrete_light.json", "textures/concrete.json", "textures/vent_fan_color.json"],
+"model":"local_level/rail_1.json"
+}

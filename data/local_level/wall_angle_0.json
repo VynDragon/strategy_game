@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/wall_angle_0.obj",
+"textures": ["textures/concrete.json"],
+"model":"local_level/wall_angle_0.json"
+}

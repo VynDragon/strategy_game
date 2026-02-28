@@ -1,0 +1,5 @@
+{
+"model_path":"local_level/solar_tower_0.obj",
+"textures": ["textures/solar_panel.json", ""],
+"model":"local_level/solar_tower_0.json"
+}
