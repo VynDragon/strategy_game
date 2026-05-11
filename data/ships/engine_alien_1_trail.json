@@ -1,0 +1,5 @@
+{
+"model_path":"ships/engine_alien_1_trail.obj",
+"textures": ["textures/burn_0.json"],
+"model":"ships/engine_alien_1_trail.json"
+}

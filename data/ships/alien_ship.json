@@ -1,0 +1,5 @@
+{
+"model_path":"ships/alien_ship.obj",
+"textures": ["", "textures/basic_grid.json", "textures/empty_dark.json", "textures/metal_wear_mid.json", "textures/solar_panel.json", "textures/antenna.json", "textures/concrete_dark.json"],
+"model":"ships/alien_ship.json"
+}

@@ -1,0 +1,5 @@
+{
+"model_path":"ships/alien_ship_rotate.obj",
+"textures": ["", "textures/hole_gribblies.json"],
+"model":"ships/alien_ship_rotate.json"
+}

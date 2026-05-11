@@ -1,0 +1,15 @@
+menu "Zephyr"
+source "Kconfig.zephyr"
+endmenu
+
+module = SCENE_PREVIEWER
+module-str = SCENE_PREVIEWER
+source "subsys/logging/Kconfig.template.log_config"
+
+config SCENE_TO_PREVIEW
+	string "Scene to preview"
+	default "demo"
+
+config SCENE_HAS_PLAYER
+	bool "Scene controls the player object"
+	default n

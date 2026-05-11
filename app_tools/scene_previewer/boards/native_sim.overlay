@@ -1,0 +1,16 @@
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&sdl_dc {
+	compatible = "zephyr,sdl-dc";
+	height = <512>;
+	width = <1024>;
+};
+
+/ {
+	soc {
+		evdev: evdev {
+			compatible = "zephyr,native-linux-evdev";
+		};
+	};
+};
+
