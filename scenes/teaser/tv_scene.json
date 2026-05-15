@@ -1,0 +1,553 @@
+[
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1192.69677734375,
+                "y": 179.65834045410156,
+                "z": -329.8628234863281,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 53.338432263537115,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "book_3",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1341.261962890625,
+                "y": 0.0,
+                "z": -1289.786376953125,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -256.00002655194265,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "bookshelf_filled",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1235.9356689453125,
+                "y": 0.0,
+                "z": -136.33871459960938,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "cabinet",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1153.8074951171875,
+                "y": 168.21238708496094,
+                "z": 125.50605010986328,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "magazines",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1184.98486328125,
+                "y": 303.580322265625,
+                "z": -381.9940490722656,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -79.94368139699878,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "magazines",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 514.439453125,
+                "y": 245.9564208984375,
+                "z": -381.9940490722656,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -207.12232344414105,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "magazines",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -520.2503662109375,
+                "y": 0.0,
+                "z": -797.5870971679688,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -128.0000035619245,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "nightstand",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1377.603759765625,
+                "y": 0.0,
+                "z": 1776.593994140625,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 128.0000035619245,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 822.9794921875,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "nightstand",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -440.48846435546875,
+                "y": 300.8092346191406,
+                "z": -435.0177307128906,
+                "w": 512
+            },
+            "rotation": {
+                "x": 52.52367144356878,
+                "y": -46.12669476254515,
+                "z": -61.05217713309442,
+                "w": 512
+            },
+            "scale": {
+                "x": 345.9713439941406,
+                "y": 345.9713439941406,
+                "z": 345.9713439941406,
+                "w": 0
+            }
+        },
+        "visual_i": "pillow",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -213.5161895751953,
+                "y": 19.03984832763672,
+                "z": -805.2525024414062,
+                "w": 512
+            },
+            "rotation": {
+                "x": -0.0,
+                "y": -0.0,
+                "z": 127.99999384787769,
+                "w": 512
+            },
+            "scale": {
+                "x": 222.77487182617188,
+                "y": 445.54974365234375,
+                "z": 445.54974365234375,
+                "w": 0
+            }
+        },
+        "visual_i": "pillow",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 29.8150634765625,
+                "y": 0.0,
+                "z": 1197.4854736328125,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 201.5201355028247,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "poof",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -373.2284240722656,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "sofa",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 553.4518432617188,
+                "y": 0.0,
+                "z": -379.5039978027344,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "table",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -511.168701171875,
+                "y": 328.01873779296875,
+                "z": -792.0714721679688,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "table_lamp",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 8,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1249.30908203125,
+                "y": 306.7450256347656,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -256.00002655194265,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "tv",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "tv_scene_room",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1218.44677734375,
+                "y": 300.4046325683594,
+                "z": -519.3873901367188,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "vase",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1382.37451171875,
+                "y": -6.05084228515625,
+                "z": -1889.9937744140625,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -59.901130583302674,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 910.6864624023438,
+                "y": 1326.6475830078125,
+                "z": 910.6864624023438,
+                "w": 0
+            }
+        },
+        "visual_i": "vase",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 1669.4442138671875,
+                "y": -31.46526527404785,
+                "z": 1253.1748046875,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 128.0000035619245,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "window_1",
+        "collisions": ""
+    }
+]

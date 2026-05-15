@@ -1,0 +1,5 @@
+{
+"model_path":"interior/poof.obj",
+"textures": ["textures/fabric_cream.json"],
+"model":"interior/poof.json"
+}

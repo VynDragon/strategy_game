@@ -54,6 +54,7 @@ static Controls controls = {0};
 
 static void process() {
 	if (player != 0) {
+		//LOG_ERR("\r\b%d %d %d", player->visual.transform.translation.x, player->visual.transform.translation.y, player->visual.transform.translation.z);
 		player->visual.transform.rotation.y += controls.vy;
 		player->visual.transform.rotation.x += controls.vx;
 		if (player->visual.transform.rotation.y > L3_F/2) player->visual.transform.rotation.y = -L3_F/2;
@@ -176,6 +177,8 @@ int main()
 	display_blanking_off(display_device);
 
 	engine_UI_set_area(0,0, CONFIG_RESOLUTION_X, CONFIG_RESOLUTION_Y);
+
+	//display_set_contrast(display_device, 210);
 
 	timing_init();
 	timing_start();

@@ -1,0 +1,5 @@
+{
+"model_path":"interior/tv_scene_room.obj",
+"textures": ["textures/stucco_1.json", "textures/finewood.json", "textures/carpet_1.json", "textures/planks_1.json"],
+"model":"interior/tv_scene_room.json"
+}

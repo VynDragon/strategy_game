@@ -1,0 +1,5 @@
+{
+"model_path":"interior/nightstand.obj",
+"textures": ["textures/oak.json"],
+"model":"interior/nightstand.json"
+}

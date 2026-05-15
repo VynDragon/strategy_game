@@ -38,6 +38,30 @@
 			mipi-mode = "MIPI_DBI_MODE_SPI_4WIRE";
 			grayscale-table = [04 06 08 0A 0C 0D 10 12 14 16 18 1C 20 24 3C];
 		};
+		// display: ssd1322@0 {
+		// 	compatible = "solomon,ssd1322";
+		// 	mipi-max-frequency = <21000000>;
+		// 	reg = <0>;
+		// 	oscillator-freq = <0xe1>;
+		// 	width = <240>;
+		// 	height = <128>;
+		// 	column-offset=<24>;
+		// 	row-offset=<0>;
+		// 	start-line = <0>;
+		// 	mux-ratio = <127>;
+		// 	vcomh-voltage = <0x6>;
+		// 	precharge-voltage = <0x1f>;
+		// 	phase-length = <0xd2>;
+		// 	mipi-mode = "MIPI_DBI_MODE_SPI_4WIRE";
+		// 	remap-nibble;
+		// 	/* Commented remaps, offset is 36, otherwise 24 */
+		// 	remap-columns;
+		// 	remap-rows;
+		// 	remap-com-odd-even-split;
+		// 	grayscale-enhancement;
+		// 	grayscale-enhancement-lg;
+		// 	grayscale-table = [34 38 3A 40 48 50 58 60 68 70 78 80 96 A0 AA];
+		// };
 	};
 };
 
@@ -130,4 +154,13 @@
 			col-size = <4>;
 		};
 	};
+};
+
+
+&clk_aupll {
+	top-frequency = <DT_FREQ_M(480)>;
+};
+
+&clk_wifipll {
+	top-frequency = <BL61X_WIFIPLL_TOP_FREQ>;
 };

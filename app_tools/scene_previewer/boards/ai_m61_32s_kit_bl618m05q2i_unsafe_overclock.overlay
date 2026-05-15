@@ -151,3 +151,12 @@
 		};
 	};
 };
+
+
+&clk_aupll {
+	top-frequency = <DT_FREQ_M(640)>;
+};
+
+&clk_wifipll {
+	top-frequency = <BL61X_WIFIPLL_TOP_FREQ>;
+};

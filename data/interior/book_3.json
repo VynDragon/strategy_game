@@ -1,0 +1,5 @@
+{
+"model_path":"interior/book_3.obj",
+"textures": ["textures/books.json"],
+"model":"interior/book_3.json"
+}
