@@ -1,5 +1,5 @@
 {
 "model_path":"interior/tv.obj",
-"textures": [""],
+"textures": ["", "texture_animations/teaser_tv/frame0020.json"],
 "model":"interior/tv.json"
 }

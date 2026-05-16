@@ -164,3 +164,9 @@
 &clk_wifipll {
 	top-frequency = <BL61X_WIFIPLL_TOP_FREQ>;
 };
+
+&clk_flash {
+	clocks = <&clk_wifipll BL61X_WIFIPLL_ID_DIV1>;
+	read-delay = <1>;
+	/delete-property/ rx-clock-invert;
+};

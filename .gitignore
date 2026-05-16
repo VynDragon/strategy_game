@@ -62,3 +62,6 @@ build/
 
 # Blender backups
 *.blend1
+
+# Krita temp
+*.kra~
