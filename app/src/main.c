@@ -11,6 +11,8 @@ LOG_MODULE_REGISTER(main);
 #include "logo_scene.h"
 #include "context.h"
 
+#include "generated_objects.h"
+
 static const struct device *display_device = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 
 int main()
@@ -29,6 +31,8 @@ int main()
 	k_msleep(100);
 	display_blanking_on(display_device);
 	display_blanking_off(display_device);
+
+	printf("%x", generated_object_list);
 
 	init_engine(&context_engine_pf);
 
