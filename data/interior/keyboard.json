@@ -1,0 +1,5 @@
+{
+"model_path":"interior/keyboard.obj",
+"textures": ["textures/keyboard.json"],
+"model":"interior/keyboard.json"
+}
