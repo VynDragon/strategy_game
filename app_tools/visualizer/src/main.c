@@ -71,6 +71,15 @@ static void process() {
 
 		L3_Camera *camera = engine_getcamera();
 		camera->transform = player->visual.transform;
+#ifdef CONFIG_SDL_DISPLAY
+		printf("\r\b%d %d %d %d %d %d      ",
+			camera->transform.translation.x,
+			camera->transform.translation.y,
+			camera->transform.translation.z,
+			camera->transform.rotation.x,
+			camera->transform.rotation.y,
+			camera->transform.rotation.z);
+#endif
 	}
 
 	do_editor_UI();
@@ -163,7 +172,7 @@ int main()
 
 	/* 'player' object */
 	Engine_Object tmp = {0};
-	L3_transform3DSet(0 * L3_F,0,-3*L3_F,0,0,0,L3_F,L3_F,L3_F,&(tmp.visual.transform));
+	L3_transform3DSet(0 * L3_F,0,-8*L3_F,0,0,0,L3_F,L3_F,L3_F,&(tmp.visual.transform));
 	tmp.view_range = 16 * L3_F;
 	tmp.visual_type = ENGINE_VISUAL_NOTHING;
 	player = engine_add_object(tmp);

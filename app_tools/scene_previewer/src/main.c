@@ -40,8 +40,11 @@ typedef struct {
 
 static Engine_Object* player = 0;
 static Controls controls = {0};
+static uint64_t fps = CONFIG_TARGET_PROCESS_FPS;
 
 static void process() {
+	L3_Camera *camera = engine_getcamera();
+
 	if (player != 0) {
 		//LOG_ERR("\r\b%d %d %d", player->visual.transform.translation.x, player->visual.transform.translation.y, player->visual.transform.translation.z);
 		player->visual.transform.rotation.y += controls.vy;
@@ -70,12 +73,20 @@ static void process() {
 		player->visual.transform.translation.y += controls.x * left.y / L3_F;
 		player->visual.transform.translation.z += controls.x * left.z / L3_F;
 
-		L3_Camera *camera = engine_getcamera();
 		camera->transform = player->visual.transform;
 	}
-}
 
-static bool slowed = false;
+#ifdef CONFIG_SDL_DISPLAY
+		printf("\r\b%d %d %d %d %d %d, pfps: %d      ",
+			camera->transform.translation.x,
+			camera->transform.translation.y,
+			camera->transform.translation.z,
+			camera->transform.rotation.x,
+			camera->transform.rotation.y,
+			camera->transform.rotation.z,
+			(int)(fps));
+#endif
+}
 
 static void update_controls(struct input_event *evt, void *user_data)
 {
@@ -134,15 +145,17 @@ static void update_controls(struct input_event *evt, void *user_data)
 			cont->speedmul = 1;
 	}
 
-	if (evt->code == INPUT_KEY_SPACE) {
+	if (evt->code == INPUT_KEY_PAGEUP) {
 		if (!evt->value) {
-			if (slowed) {
-				engine_set_process_fps(CONFIG_TARGET_PROCESS_FPS);
-				slowed = false;
-			} else {
-				engine_set_process_fps(1);
-				slowed = true;
-			}
+			fps = fps * 1.25f;
+			engine_set_process_fps(fps);
+		}
+	}
+
+	if (evt->code == INPUT_KEY_PAGEDOWN) {
+		if (!evt->value) {
+			fps = fps * 0.8f;
+			engine_set_process_fps(fps);
 		}
 	}
 }

@@ -272,7 +272,7 @@ static void tv_scene_init(Engine_Scene *scene)
 		.visual.transform.rotation.y = -256.00002655194265,
 		.visual.transform.rotation.z = -0.0,
 		.visual.transform.rotation.w = 512,
-		.visual.config.backfaceCulling = 1,
+		.visual.config.backfaceCulling = 2,
 		.visual.solid_color = 0x80,
 		.visual.config.visible = L3_VISIBLE_MODEL_TEXTURED | L3_VISIBLE_THRESLIGHT,
 		.visual.model = &scene_data->tv_model,

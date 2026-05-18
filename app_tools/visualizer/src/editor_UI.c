@@ -54,8 +54,9 @@ static void add_obj(lv_event_t * e)
 		object->view_range = 0x100000;
 		if (object->collisions != NULL) {
 		}
-		printf("Adding: %s, id: %d\n", lv_list_get_button_text(select_object_list, obj), id);
-		printf("objcount: %d\n", engine_object_getcnt() + engine_statics_getcnt());
+		if (object->visual_type == ENGINE_VISUAL_MODEL) {
+			object->visual.config.visible |= L3_VISIBLE_NORMALDIFF;
+		}
 	}
 }
 
