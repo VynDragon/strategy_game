@@ -239,36 +239,36 @@ static void alien_ship_scene_init(Engine_Scene *scene)
 
 	scene_data->ship = engine_add_object(ships_alien_ship_object);
 	scene_data->ship->view_range = 4096 * L3_F;
-	L3_transform3DSet(0 * L3_F,0,0*L3_F,0,0,0,1*L3_F,1*L3_F,1*L3_F,&(scene_data->ship->visual.transform));
+	L3_transform3DSet(0 * L3_F,0,0*L3_F,0,256,0,1*L3_F,1*L3_F,1*L3_F,&(scene_data->ship->visual.transform));
 	scene_data->ship->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED | L3_VISIBLE_NORMALLIGHT;
 
 	scene_data->ship_rotate = engine_add_object(ships_alien_ship_rotate_object);
-	L3_transform3DSet(0 * L3_F,0,0*L3_F,0,0,0,1*L3_F,1*L3_F,1*L3_F,&(scene_data->ship_rotate->visual.transform));
+	L3_transform3DSet(0 * L3_F,0,0*L3_F,0,256,0,1*L3_F,1*L3_F,1*L3_F,&(scene_data->ship_rotate->visual.transform));
 	scene_data->ship_rotate->visual.solid_color = 0x70;
 	scene_data->ship_rotate->view_range = 4096 * L3_F;
 	scene_data->ship_rotate->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED | L3_VISIBLE_NORMALLIGHT;
 	ship_rotate_animation_objects[0] = scene_data->ship_rotate;
 
 	ship_thrust_animation_objects[0] = engine_add_object(ships_engine_alien_1_trail_object);
-	L3_transform3DSet(1.5*L3_F,0*L3_F,-47.5*L3_F,0,0,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[0]->visual.transform));
+	L3_transform3DSet(1.5*L3_F,0*L3_F,-47.5*L3_F,0,256,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[0]->visual.transform));
 	ship_thrust_animation_objects[0]->visual.solid_color = 0xB0;
 	ship_thrust_animation_objects[0]->view_range = 4096 * L3_F;
 	ship_thrust_animation_objects[0]->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED;
 
 	ship_thrust_animation_objects[1] = engine_add_object(ships_engine_alien_1_trail_object);
-	L3_transform3DSet(-1.5*L3_F,0*L3_F,-47.5*L3_F,0,0,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[1]->visual.transform));
+	L3_transform3DSet(-1.5*L3_F,0*L3_F,-47.5*L3_F,0,256,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[1]->visual.transform));
 	ship_thrust_animation_objects[1]->visual.solid_color = 0xB0;
 	ship_thrust_animation_objects[1]->view_range = 4096 * L3_F;
 	ship_thrust_animation_objects[1]->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED;
 
 	ship_thrust_animation_objects[2] = engine_add_object(ships_engine_alien_1_trail_object);
-	L3_transform3DSet(0*L3_F,2.5*L3_F,-47.5*L3_F,0,0,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[2]->visual.transform));
+	L3_transform3DSet(0*L3_F,2.5*L3_F,-47.5*L3_F,0,256,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[2]->visual.transform));
 	ship_thrust_animation_objects[2]->visual.solid_color = 0xB0;
 	ship_thrust_animation_objects[2]->view_range = 4096 * L3_F;
 	ship_thrust_animation_objects[2]->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED;
 
 	ship_thrust_animation_objects[3] = engine_add_object(ships_engine_alien_1_trail_object);
-	L3_transform3DSet(0*L3_F,-2.5*L3_F,-47.5*L3_F,0,0,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[3]->visual.transform));
+	L3_transform3DSet(0*L3_F,-2.5*L3_F,-47.5*L3_F,0,256,0,0.5*L3_F,0.5*L3_F,1*L3_F,&(ship_thrust_animation_objects[3]->visual.transform));
 	ship_thrust_animation_objects[3]->visual.solid_color = 0xB0;
 	ship_thrust_animation_objects[3]->view_range = 4096 * L3_F;
 	ship_thrust_animation_objects[3]->visual.config.visible = L3_VISIBLE_MODEL_TEXTURED;
