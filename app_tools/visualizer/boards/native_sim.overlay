@@ -4,6 +4,7 @@
 	compatible = "zephyr,sdl-dc";
 	height = <512>;
 	width = <1024>;
+	pixel-format = <PANEL_PIXEL_FORMAT_L_8>;
 };
 
 / {
@@ -20,6 +21,7 @@
 			compatible = "zephyr,sdl-dc";
 			height = <512>;
 			width = <1024>;
+			pixel-format = <PANEL_PIXEL_FORMAT_L_8>;
 		};
 		evdev: evdev {
 			compatible = "zephyr,native-linux-evdev";

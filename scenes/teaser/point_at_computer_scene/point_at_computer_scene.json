@@ -1,0 +1,118 @@
+[
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 8,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "Character",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 8,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "Character",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "desk_with_computer",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 387.79815673828125,
+                "y": 0.0,
+                "z": -86.99427795410156,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 163.49723858880662,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "office_chair",
+        "collisions": ""
+    }
+]
