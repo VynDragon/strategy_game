@@ -1,0 +1,5 @@
+{
+"model_path":"interior/office_chair.obj",
+"textures": ["", "textures/fabric_cream.json"],
+"model":"interior/office_chair.json"
+}
