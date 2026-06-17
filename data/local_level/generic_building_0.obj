@@ -1,7 +1,7 @@
-# Blender 5.0.1
+# Blender 5.1.2
 # www.blender.org
-mtllib building_0.mtl
-o building_0
+mtllib generic_building_0.mtl
+o generic_building_0
 v -7.000000 -2.000000 10.000000
 v -7.000000 20.000000 10.000000
 v -7.000000 -2.000000 -10.000000

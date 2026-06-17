@@ -1,0 +1,5 @@
+{
+"model_path":"interior/server_rack.obj",
+"textures": ["", "textures/servers.json"],
+"model":"interior/server_rack.json"
+}

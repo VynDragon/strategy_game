@@ -57,7 +57,7 @@ static void particle_smoke(E_Particle *self)
 #define CAM_ANIM_4(i, _) {.type = FRAMEARRAY_FRAME_RELATIVE, .transform = {.translation = {0}, .rotation = {.x = 0, .y = -1, .z = 0}, .scale = {0}}}
 
 static const ObjectProcess_FrameArray_Frame camera_animation_impl_frames[] = {
-	LISTIFY(720, CAM_ANIM_3, (,)),
+	LISTIFY(100, CAM_ANIM_3, (,)),
 };
 
 static const ObjectProcess_FrameArray camera_animation_impl = {
