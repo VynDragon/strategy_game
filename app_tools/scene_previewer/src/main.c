@@ -19,7 +19,7 @@ LOG_MODULE_REGISTER(main);
 
 #include "scenes.h"
 
-#include "ui_style.h"
+#include "ui/ui_style.h"
 
 static const struct device *display_device = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 

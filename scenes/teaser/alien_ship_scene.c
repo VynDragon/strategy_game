@@ -15,7 +15,7 @@
 #include "space_rt.h"
 #include "space_up.h"
 
-#include "ui_style.h"
+#include "ui/ui_style.h"
 
 typedef struct Alien_Ship_Scene_Data_s {
 	bool					yes;

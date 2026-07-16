@@ -1,0 +1,147 @@
+[
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": 38400.0,
+                "y": 1024.0,
+                "z": 5120.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "generic_building_0",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -25259.0625,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "launch_tower_0",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 8,
+        "solid_color": 128,
+        "transform": {
+            "translation": {
+                "x": 102400.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 20480.0,
+                "y": 512.0,
+                "z": 102400.0,
+                "w": 0
+            }
+        },
+        "visual_i": "Plane",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 2,
+        "solid_color": 204,
+        "transform": {
+            "translation": {
+                "x": -24717.009765625,
+                "y": 785.0348510742188,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 128.0000035619245,
+                "z": -0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 512.0,
+                "y": 512.0,
+                "z": 512.0,
+                "w": 0
+            }
+        },
+        "visual_i": "rocket_0",
+        "collisions": ""
+    },
+    {
+        "visual_type": 2,
+        "view_range": 131072,
+        "backfaceCulling": 1,
+        "visible": 8,
+        "solid_color": 128,
+        "transform": {
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 512
+            },
+            "scale": {
+                "x": 51200.0,
+                "y": 512.0,
+                "z": 51200.0,
+                "w": 0
+            }
+        },
+        "visual_i": "rocket_scene_terrain",
+        "collisions": ""
+    }
+]

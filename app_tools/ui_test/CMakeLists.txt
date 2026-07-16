@@ -7,8 +7,6 @@ target_sources(app PRIVATE src/main.c)
 
 zephyr_include_directories(include)
 
-add_subdirectory(scenes)
-
 set(TOOLS_FOLDER ${CMAKE_CURRENT_SOURCE_DIR}/../../../zephyr_3d_game_template2/tools)
 
 set(SCENE_TO_PREVIEW ${CONFIG_SCENE_TO_PREVIEW})

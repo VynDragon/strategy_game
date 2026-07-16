@@ -1,0 +1,17 @@
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+&sdl_dc {
+	compatible = "zephyr,sdl-dc";
+	height = <64>;
+	width = <128>;
+	pixel-format = <PANEL_PIXEL_FORMAT_L_8>;
+};
+
+/ {
+	soc {
+		evdev: evdev {
+			compatible = "zephyr,native-linux-evdev";
+		};
+	};
+};
+

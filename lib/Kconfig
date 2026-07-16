@@ -1,0 +1,12 @@
+config STRATEGY_UI
+	bool "Strategy Game UI"
+
+config STRATEGY_GAME
+	bool "Strategy Game arching code"
+
+if STRATEGY_UI
+
+config DEFAULT_UI
+	default n
+
+endif

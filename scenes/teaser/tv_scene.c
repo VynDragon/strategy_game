@@ -12,9 +12,9 @@
 
 #include "tv_scene/map.h"
 
-#include "ui_style.h"
+#include "ui/ui_style.h"
 
-#include "misc_light_round.h"
+#include "misc/misc_light_round.h"
 
 #include "models/cube.h"
 
